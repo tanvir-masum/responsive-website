@@ -1,0 +1,213 @@
+/* ---------------------
+     font awesome 
+------------------------ */
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* --------------------
+     navber and brand   
+----------------------- */
+.navber{
+    background-color: white;
+    padding: 0;
+}
+.brand-name{
+     padding-left: 100px;
+     margin: 0;
+}
+
+/* ---------------------
+       top style 
+------------------------*/
+.top-container{
+     width: 100%;
+}
+
+.top-area{
+    display: grid;
+   
+    grid-template-columns: repeat(2, 1fr);
+    background-color: white;
+    margin-bottom: 50px;
+}
+.top-content{
+   
+    width: 583px;
+    height: 272px;
+    padding-left: 100px;
+    padding-top: 40px;
+}
+
+.top-banner img{
+    width: 50%;
+}
+
+.link-button{
+    text-decoration: none;
+    color: whitesmoke ;
+    padding: 10px 40px;
+    background-color: #E02C6D;
+
+    font-weight: 700;
+    border-radius: 20px;
+}
+
+
+
+/* -----------------------
+        utilites 
+-------------------------- */
+
+body{
+    
+    background-color: #f5f3f3;
+
+}
+main{
+    display: flex;
+    justify-content: center;
+}
+.container{
+    
+    width: 1247px;
+}
+
+
+
+/*  ------------------------------
+        products styles
+----------------------------------- */
+.section-title{
+    text-align: center;
+}
+.products{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap:25px;
+    border-radius: 5px;
+    padding: 10px;
+}
+.product{
+    width: 329px;
+    height: 450px;
+    left: 196px;
+    top: 1035px;
+    padding: 20px 5px 20px 30px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+    
+
+
+.products .product-banner img{
+    width: 300px;
+    height: 256px;
+    left: 210px;
+    top: 1052px;
+    }
+
+.product-rating{
+    display: flex;
+    align-items: center;    
+}
+
+.fa-star{
+    font-size: 12px;
+}
+
+.fa-star.filled{
+        color: #FB8200;
+}
+
+/* -----------------------------
+         footer area 
+-------------------------------- */
+
+footer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: black;
+    text-decoration-color: white;
+    width: 1440px;
+    height: 239px;
+}
+
+.footer-info{
+    color: white;
+}
+
+/* ------------------------
+       Media Queries
+ --------------------------  */
+
+ /* Mobile Device */
+
+ @media only screen and (max-width:688px){
+       .container{
+         width: 100%;
+         
+     }
+    .top-area{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .top-banner img{
+        width: 257px;
+        height: 257px;
+        right: 51px;
+        top: 81px;
+    
+     }
+     .top-content{
+        width: 404px;
+        height: 222px;
+        left: 22px;
+        top: 352px;
+    }
+
+      .products{
+         grid-template-columns: repeat(1, 1fr);
+     }
+     .product{
+         flex-direction: column;
+     }
+        
+     footer{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        background-color: black;
+        text-decoration-color: white;
+        width: 400px;
+        height: 211px;
+     }
+     
+    }
+
+ /* Tablet device */
+
+ @media only screen and (min-width:688px) and (max-width: 992px){
+    .top-container, .container{
+        width: 100%;
+    }
+    .products{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .product{
+        flex-direction: column;
+    }
+   footer{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        background-color: black;
+        text-decoration-color: white;
+        width: 780px;
+        height: 250px;
+   }
+}
