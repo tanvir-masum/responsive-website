@@ -22,6 +22,7 @@ body{
 /* ---------------------
        top style 
 ------------------------*/
+
 .flexible-container{
      display: flex;
      justify-content: space-between;
@@ -48,11 +49,22 @@ body{
  
 }
 
+/* -------------------------
+  banner image hover effect
+ --------------------------- */
 
 .top-banner img{
     width: 80%;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
 }
-
+.top-banner:hover img {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+    
 .link-button{
     text-decoration: none;
     color: whitesmoke ;
@@ -109,13 +121,11 @@ main{
     height: 450px;
     left: 196px;
     top: 1035px;
-    padding: 20px 5px 20px 30px;
+    padding: 25px 5px 50px 30px;
     background: #FFFFFF;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
 }
-    
-
 
 .products .product-banner img{
     width: 300px;
@@ -147,7 +157,7 @@ footer{
     text-align: center;
     background-color: black;
     text-decoration-color: white;
-    width: 1440px;
+    width: 100%;
     height: 239px;
 }
 
@@ -160,146 +170,74 @@ footer{
        Media Queries
  -------------------------- */
 
- /* -----------------------
+/* -----------------------
        Mobile Device         
     ----------------------- */
 
 
 @media only screen and (max-width:688px){
-       
-    .flexible-container{
-        display: flex;
-        justify-content: center;
-        background-color: white;
-        flex-direction: column;
-        align-items: center;
-       
-   }
-   
-   .top-content{
-       font-size: 20px;
-       width: 340px;
-       height: 380px;
-       margin: 5px;
-       padding: 5px;
-       order: 2;
-   }
-   .top-banner{
-       height: 340px;
-       width: 340px;
-       background-color: white;
-       margin:10px;
-       padding:5px;
-       order: 1;
-   }
-   
-   
-   .top-banner img{
-       width: 100%;
-   }
-   
-   .link-button{
-       text-decoration: none;
-       color: whitesmoke ;
-       padding: 10px 40px;
-       background-color: #E02C6D;
-   
-       font-weight: 700;
-       border-radius: 20px;
-   }
-   
     
+.flexible-container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
     
-    
-    /* -----------------------------
-        product and footer section
-    -------------------------------- */
-    
-    
-    .container{
-         width: 100%;
-        
-    }
-    
-    .products{
-         grid-template-columns: repeat(1, 1fr);
-    }
-    .product{
-         flex-direction: column;
-    }
-        
-    footer{
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        background-color: black;
-        text-decoration-color: white;
-        width: 400px;
-        height: 211px;
-    }
-     
 }
 
-  /* ----------------------
-        Tablet device       
-    ----------------------- */
+.top-content{
+    font-size: 20px;
+    width: 340px;
+    height: 380px;
+    margin: 5px;
+    padding: 5px;
+    order: 2;
+}
+.top-banner{
+    height: 340px;
+    width: 340px;
+    background-color: white;
+    margin:10px;
+    padding:5px;
+    order: 1;
+}
 
-@media only screen and (min-width:688px) and (max-width: 992px){
-    
-    .flexible-container{
-       
-        display: flex;
-        justify-content: center;
-        background-color: white;
-        flex-direction: column;
-        align-items: center;
-   }
-   
-   .top-content{
-      
-       width: 440px;
-       height: 440px;
-       padding: 5px;
-       margin: 30px;
-       order: 2;
-   }
-   .top-banner{
-       width: 440px;
-       margin: 10px;
-       padding: 5px;
-       order: 1;
-   }
-   
-   
-   .top-banner img{
-       width: 100%;
-   }
-   
-   .link-button{
-       text-decoration: none;
-       color: whitesmoke ;
-       padding: 10px 30px;
-       background-color: #E02C6D;
-    
-       font-weight: 700;
-       border-radius: 20px;
-   }
-   
-   /* -----------------------------
-        product and footer section
-    -------------------------------- */
-    
-    .container{
-        width: 100%;
-    }
-    .products{
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .product{
-        flex-direction: column;
-    }
 
-   footer{
+.top-banner img{
+    width: 100%;
+}
+
+.link-button{
+    text-decoration: none;
+    color: whitesmoke ;
+    padding: 10px 40px;
+    background-color: #E02C6D;
+    font-weight: 700;
+    border-radius: 20px;
+}
+
+
+
+
+/* -----------------------------
+    product and footer section
+-------------------------------- */
+
+
+.container{
+        width: 100%;    
+}
+
+.products{
+        grid-template-columns: repeat(1, 1fr);
+}
+.product{
+        flex-direction: column;
+}
+    
+footer{
     display: flex;
     justify-content: center;
     text-align: center;
@@ -307,5 +245,78 @@ footer{
     text-decoration-color: white;
     width: 100%;
     height: 211px;
-   }
+}
+    
+}
+
+/* ----------------------
+    Tablet device       
+----------------------- */
+
+@media only screen and (min-width:688px) and (max-width: 992px){
+
+.flexible-container{
+    
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.top-content{
+    
+    width: 440px;
+    height: 440px;
+    padding: 5px;
+    margin: 30px;
+    order: 2;
+}
+.top-banner{
+    width: 440px;
+    margin: 10px;
+    padding: 5px;
+    order: 1;
+}
+
+
+.top-banner img{
+    width: 100%;
+}
+
+
+.link-button{
+    text-decoration: none;
+    color: whitesmoke ;
+    padding: 10px 30px;
+    background-color: #E02C6D;
+
+    font-weight: 700;
+    border-radius: 20px;
+}
+
+/* -----------------------------
+    product and footer section
+-------------------------------- */
+
+.container{
+    width: 100%;
+}
+.products{
+    grid-template-columns: repeat(2, 1fr);
+}
+.product{
+    flex-direction: column;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: black;
+    text-decoration-color: white;
+    width: 100%;
+    height: 211px;
+}
 }
