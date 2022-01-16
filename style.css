@@ -12,6 +12,7 @@ body{
 .navber{
     background-color: white;
     padding: 0;
+    margin: 0;
 }
 .brand-name{
      padding-left: 100px;
@@ -21,27 +22,35 @@ body{
 /* ---------------------
        top style 
 ------------------------*/
-.top-container{
-     width: 100%;
+.flexible-container{
+     display: flex;
+     justify-content: space-between;
+     background-color: white;
+     align-items: center;
 }
 
-.top-area{
-    display: grid;
-   
-    grid-template-columns: repeat(2, 1fr);
-    background-color: white;
-    margin-bottom: 50px;
-}
 .top-content{
    
-    width: 583px;
-    height: 272px;
-    padding-left: 100px;
-    padding-top: 40px;
+    width: 480px;
+    height: 400px;
+    padding-left: 50px;
+    padding-top: 50px;
+    margin: 50px;
+    font-size: 25px;
+   
+}
+.top-banner{
+    width: 480px;
+    height: 400px;
+    background-color: white;
+    margin: 70px;
+    
+ 
 }
 
+
 .top-banner img{
-    width: 50%;
+    width: 80%;
 }
 
 .link-button{
@@ -79,8 +88,10 @@ main{
 /*  ------------------------------
         products styles
 ----------------------------------- */
+
 .section-title{
     text-align: center;
+    font-size: 35px;
 }
 .products{
     display: grid;
@@ -140,44 +151,80 @@ footer{
     color: white;
 }
 
+
 /* ------------------------
        Media Queries
- --------------------------  */
+ -------------------------- */
 
- /* Mobile Device */
+ /* -----------------------
+       Mobile Device         
+    ----------------------- */
 
- @media only screen and (max-width:688px){
-       .container{
+
+@media only screen and (max-width:688px){
+       
+    .flexible-container{
+        display: flex;
+        justify-content: center;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+       
+   }
+   
+   .top-content{
+       font-size: 20px;
+       width: 340px;
+       height: 320px;
+       margin: 5px;
+       padding: 5px;
+       order: 2;
+   }
+   .top-banner{
+       height: 340px;
+       width: 340px;
+       background-color: white;
+       margin:10px;
+       padding:5px;
+       order: 1;
+   }
+   
+   
+   .top-banner img{
+       width: 100%;
+   }
+   
+   .link-button{
+       text-decoration: none;
+       color: whitesmoke ;
+       padding: 10px 40px;
+       background-color: #E02C6D;
+   
+       font-weight: 700;
+       border-radius: 20px;
+   }
+   
+    
+    
+    
+    /* -----------------------------
+        product and footer section
+    -------------------------------- */
+    
+    
+    .container{
          width: 100%;
-         
-     }
-    .top-area{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
-    
-    .top-banner img{
-        width: 257px;
-        height: 257px;
-        right: 51px;
-        top: 81px;
-    
-     }
-     .top-content{
-        width: 404px;
-        height: 222px;
-        left: 22px;
-        top: 352px;
-    }
-
-      .products{
-         grid-template-columns: repeat(1, 1fr);
-     }
-     .product{
-         flex-direction: column;
-     }
         
-     footer{
+    }
+    
+    .products{
+         grid-template-columns: repeat(1, 1fr);
+    }
+    .product{
+         flex-direction: column;
+    }
+        
+    footer{
         display: flex;
         justify-content: center;
         text-align: center;
@@ -185,14 +232,60 @@ footer{
         text-decoration-color: white;
         width: 400px;
         height: 211px;
-     }
-     
     }
+     
+}
 
- /* Tablet device */
+  /* ----------------------
+        Tablet device       
+    ----------------------- */
 
- @media only screen and (min-width:688px) and (max-width: 992px){
-    .top-container, .container{
+@media only screen and (min-width:688px) and (max-width: 992px){
+    
+    .flexible-container{
+       
+        display: flex;
+        justify-content: center;
+        background-color: #FB8200;
+        flex-direction: column;
+        align-items: center;
+   }
+   
+   .top-content{
+      
+       width: 440px;
+       height: 280px;
+       padding: 5px;
+       margin: 30px;
+       order: 2;
+   }
+   .top-banner{
+       width: 440px;
+       margin: 10px;
+       padding: 5px;
+       order: 1;
+   }
+   
+   
+   .top-banner img{
+       width: 100%;
+   }
+   
+   .link-button{
+       text-decoration: none;
+       color: whitesmoke ;
+       padding: 10px 30px;
+       background-color: #E02C6D;
+    
+       font-weight: 700;
+       border-radius: 20px;
+   }
+   
+   /* -----------------------------
+        product and footer section
+    -------------------------------- */
+    
+    .container{
         width: 100%;
     }
     .products{
@@ -201,13 +294,14 @@ footer{
     .product{
         flex-direction: column;
     }
+
    footer{
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        background-color: black;
-        text-decoration-color: white;
-        width: 780px;
-        height: 250px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: black;
+    text-decoration-color: white;
+    width: 100%;
+    height: 211px;
    }
 }
